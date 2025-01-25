@@ -2,7 +2,6 @@
   "name": "vanlife",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Tochiskool.github.io/shop_a_van",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
@@ -12,8 +11,6 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
