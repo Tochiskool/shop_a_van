@@ -15,10 +15,15 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #f4eeee;
+  /* background: #f4eeee; */
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   overflow: scroll;
+  background: linear-gradient(135deg, #fee6f0 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, #fee6f0 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, #fee6f0 25%, transparent 25%),
+    linear-gradient(45deg, #fee6f0 25%, transparent 25%);
+  background-size: 100px 100px; /* Adjust the size based on the pattern */
 }
 
 h1,
