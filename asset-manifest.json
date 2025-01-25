@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/shop_a_van/static/css/main.ee16f548.css",
+    "main.js": "/shop_a_van/static/js/main.cb3de703.js",
+    "static/media/house.jpg": "/shop_a_van/static/media/house.71a3acbf9f2d5b2dee20.jpg",
+    "index.html": "/shop_a_van/index.html",
+    "main.ee16f548.css.map": "/shop_a_van/static/css/main.ee16f548.css.map",
+    "main.cb3de703.js.map": "/shop_a_van/static/js/main.cb3de703.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee16f548.css",
+    "static/js/main.cb3de703.js"
+  ]
+}
