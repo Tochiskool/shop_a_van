@@ -1,0 +1,61 @@
+section h1 {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.col-1-2 {
+  /* margin-bottom: 2rem; */
+}
+
+.bg {
+  /* Center and scale the image nicely */
+  /* background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 100%; */
+  /* Full height */
+  /* height: 100%; */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.pushDown {
+  margin-top: 2rem;
+}
+.pushUp {
+  margin-top: -50px;
+}
+.pushUp p,
+.pushDown p {
+  line-height: 1.5;
+  text-align: justify;
+}
+.pushUp blockquote {
+  border: 1px solid lightcoral;
+  text-align: center;
+  background-color: lightcoral;
+  color: white;
+  border-radius: 5px;
+}
+.pushUp h3 {
+  font-style: italic;
+}
+@media (max-width: 48em) {
+  /* CSS selector that targets all classes that start with .col- */
+  [class*="col-"] {
+    /* get your columns to stack horizontally when the screen is small and above */
+    float: left;
+  }
+  section h1 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .pushUp {
+    margin-top: 1rem;
+    z-index: 1;
+  }
+  .pushDown {
+    clear: both;
+  }
+}

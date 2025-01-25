@@ -1,0 +1,43 @@
+.vansBody {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.vansContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 0;
+  padding: 0.1rem;
+  text-align: center;
+  list-style: none;
+}
+
+.vansContainer img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 3rem;
+  object-fit: cover;
+}
+
+.vansContainer p {
+  text-align: center;
+  padding: 0 2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 48em) {
+  /* CSS selector that targets all classes that start with .col- */
+  [class*="col-"] {
+    /* get your columns to stack horizontally when the screen is small and above */
+    float: left;
+  }
+  .vansContainer {
+    padding: 0;
+    margin: 0;
+  }
+  .vansContainer img {
+    max-width: 400px;
+    height: auto;
+  }
+}
