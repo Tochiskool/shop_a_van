@@ -1,0 +1,32 @@
+section > div h2 {
+  text-align: center;
+  font-style: italy;
+  font-size: 30px;
+  text-decoration: underline;
+}
+section > div p {
+  line-height: 1.8;
+  font-size: 20px;
+}
+.right,
+.vansBody {
+  border: 15px solid white;
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: #fdeaf2;
+  box-shadow: 10px 10px 8px #f8f6f6;
+  overflow: scroll;
+}
+.imageBackground {
+  padding: 10px;
+}
+.imageBackground img {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 2rem;
+}

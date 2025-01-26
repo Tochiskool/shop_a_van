@@ -22,7 +22,7 @@
 
 - We wrap our content first with `<BrowserRouter>.`
 
-- Then we define our <`<Routes>`>. An application can have multiple <`<Routes>`. Our basic example only uses one.
+- Then we define our `<Routes>`. An application can have multiple `<Routes>`. Our basic example only uses one.
 
 `<Route>`s can be nested. The first `<Route>` has a path of / and renders the Layout component.
 
