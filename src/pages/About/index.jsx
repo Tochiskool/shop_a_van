@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 
 const About = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <p> Know everything about me</p>
     </div>
   );

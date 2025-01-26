@@ -39,6 +39,7 @@ a:hover {
   text-decoration: underline;
 }
 .btn {
+  cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 .btn-primary {
@@ -132,8 +133,4 @@ a:hover {
   .col-2 {
     width: 16.66%;
   }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
 }
