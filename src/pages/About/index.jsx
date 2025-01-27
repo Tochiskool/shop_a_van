@@ -1,21 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UseFetch from "../../useFetch";
-import Image from "./images/house.jpg";
-import "./about.css";
-import VanDetail from "../VanDetail";
-
-// import Navbar from "../Navbar";
 
 const About = () => {
-  const [data] = UseFetch("/api/vans");
-
-  const rightObject = {
-    price: 60,
-    imageUrl: Image,
-    description:
-      "This is one of the best van that modern American want do. They are even ready to pay double the price",
-  };
   return (
     <>
       <div className='container'>
@@ -32,53 +18,97 @@ const About = () => {
             </div>
           </section>
           <div className='col-1-2'>
-            <div className='col-12'>
-              <div className='vansBody'>
-                {data &&
-                  data.vans.map((e) => (
-                    <ul className='vansContainer'>
-                      <li key={e.id} className='center'>
-                        <h3> Name: {e.name}</h3>
-                        <img
-                          style={{ maxWidth: "200px" }}
-                          src={e.imageUrl}
-                          alt={e.name}
-                        />
-                        <p>
-                          <strong>Price: $ </strong>
-                          {e.price}/day
-                        </p>
-                        <p>
-                          <strong>Description: </strong>
-                          {e.description}
-                        </p>
-                        <p>
-                          <strong className={`van-type-${e.type}-selected`}>
-                            Type: {e.type}
-                          </strong>
-                        </p>
-                      </li>
-                    </ul>
-                  ))}
-              </div>
+            <div className='col-12 right'>
+              <h3>
+                Discover Trieste at Your Own Pace with Our Premium Van Hire
+                Service
+              </h3>
+              <p>
+                Nestled in the heart of Trieste, just a stone's throw from the
+                breathtaking hills and sparkling shores of the Adriatic, we
+                offer the perfect way to explore the beauty of this historic
+                city and its surroundings. Whether you’re planning a weekend
+                getaway, a family road trip, or a spontaneous adventure, our
+                fleet of well-maintained, reliable vans is ready to take you
+                wherever your heart desires. At Van Life, we’re committed to
+                providing a seamless, flexible, and hassle-free experience. Our
+                friendly team is here to guide you through the van rental
+                process, ensuring you get the right vehicle for your
+                needs—whether that’s a spacious camper, a practical minivan, or
+                something in between.
+              </p>
             </div>
           </div>
           <div className='col-1-2'>
             <div className='col-12 right'>
-              <VanDetail />
-              <Link to='/'>Back to home</Link>
+              <blockquote>
+                <hr />
+                <h2>Why Choose Us?</h2>
+                <hr />
+              </blockquote>
+              <ul>
+                <li>
+                  <strong>Prime Location:</strong> Conveniently situated near
+                  the hills and coast, making it easy to start your journey from
+                  wherever you want. .
+                </li>
+                <li>
+                  <strong>Modern Fleet:</strong> A wide selection of fully
+                  equipped vans, all in top condition
+                </li>
+                <li>
+                  <strong>Personalized Service: </strong> We take the time to
+                  understand your needsand offer tailored advice to help make
+                  your trip unforgettable.
+                </li>
 
-              <div>
-                <div className='imageBackground'>
-                  <img src={rightObject.imageUrl} alt='a beautiful car' />
-                </div>
-                <div className='carStyle'>
-                  <button className='btn-primary'>Explore</button>
-                  <p>price: {rightObject.price}</p>
-                  <p>Brief description: {rightObject.description}</p>
-                  <button className='col-12 btn-primary'>Explore more</button>
-                </div>
-              </div>
+                <li>
+                  <strong>Flexible Rentals:</strong> Short-term and long-term
+                  rental options to suit your schedule.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className='col-12'>
+            <div className='col-1-3 right'>
+              <h3>
+                Discover Trieste at Your Own Pace with Our Premium Van Hire
+                Service
+              </h3>
+            </div>
+            <div className='col-1-3 right'>
+              <h3>
+                Discover Trieste at Your Own Pace with Our Premium Van Hire
+                Service
+              </h3>
+            </div>
+            <div className='col-1-3 right'>
+              <h3>
+                Discover Trieste at Your Own Pace with Our Premium Van Hire
+                Service
+              </h3>
+            </div>
+          </div>
+          <div className='col-12 right right'>
+            <div>
+              <h3>
+                Discover Trieste at Your Own Pace with Our Premium Van Hire
+                Service
+              </h3>
+              <p>
+                Nestled in the heart of Trieste, just a stone's throw from the
+                breathtaking hills and sparkling shores of the Adriatic, we
+                offer the perfect way to explore the beauty of this historic
+                city and its surroundings. Whether you’re planning a weekend
+                getaway, a family road trip, or a spontaneous adventure, our
+                fleet of well-maintained, reliable vans is ready to take you
+                wherever your heart desires. At Van Life, we’re committed to
+                providing a seamless, flexible, and hassle-free experience. Our
+                friendly team is here to guide you through the van rental
+                process, ensuring you get the right vehicle for your
+                needs—whether that’s a spacious camper, a practical minivan, or
+                something in between.
+              </p>
             </div>
           </div>
         </div>

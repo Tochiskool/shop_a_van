@@ -1,0 +1,23 @@
+.right {
+  border: 15px solid var(--whiteText);
+  padding: 10px;
+  border-radius: 2rem;
+  background-color: var(--lightCoral);
+  box-shadow: 10px 10px 8px var(--lightCoral);
+  overflow: scroll;
+}
+
+.imageBackground {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+.imageBackground img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2rem;
+}
+.imageBackground .carStyle {
+  padding: 1rem;
+  text-align: center;
+}
