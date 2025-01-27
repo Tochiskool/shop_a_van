@@ -5,7 +5,7 @@ import house from "./images/house.jpg";
 import UseFetch from "../../useFetch";
 import Vans from "../Vans";
 import { Link } from "react-router-dom";
-import Layout from "../Layout";
+// import Layout from "../Layout";
 const Home = () => {
   const [toggleVisibility, setToggleVisibility] = useState(false);
 
@@ -27,7 +27,7 @@ const Home = () => {
           <div className='col-1-2'>
             <div className='pushDown'>
               {/* <Navbar /> */}
-              <Layout />
+              {/* <Layout /> */}
               <div className='first-col'>
                 <h1>You got the travel plans, we got the travel van</h1>
                 <p>
@@ -56,7 +56,8 @@ const Home = () => {
           <div className='col-1-2'>
             <div className='pushUp'>
               {/* <Navbar /> */}
-              <Layout />
+              {/* <Layout /> */}
+              <h2>Our services are rated the best</h2>
               <div className='second-col'>
                 <img className='bg' src={house} alt='beautiful house' />
                 <p>
