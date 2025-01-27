@@ -6,6 +6,7 @@ import Vans from "./pages/Vans";
 import "./server";
 import NoPage from "./pages/NoPage";
 import Layout from "./pages/Layout";
+import VanDetail from "./pages/VanDetail";
 // import Navbar from "./pages/Navbar";
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='vans' element={<Vans />} />
+          <Route path='/vans/:id' element={<VanDetail />} />
           <Route path='*' element={<NoPage />} />
         </Route>
       </Routes>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import UseFetch from "../../useFetch";
 // import Navbar from "../Navbar";
 import "./vans.css";
@@ -10,22 +11,24 @@ const Vans = () => {
       {/* <Navbar /> */}
       <div className='vansBody col-12'>
         {data &&
-          data.vans.map((e) => (
+          data.vans.map((van) => (
             <ul className='vansContainer'>
-              <li key={e.id} className='center'>
-                <h3> Name: {e.name}</h3>
-                <img src={e.imageUrl} alt={e.name + " vans"} />
+              <li key={van.id} className='center'>
+                <h3> Name: {van.name}</h3>
+                <Link to={`/vans/${van.id}`}>
+                  <img src={van.imageUrl} alt={van.name + " vans"} />
+                </Link>{" "}
                 <p>
-                  <strong>Price: </strong>
-                  {e.price}
+                  <strong>Price: $ </strong>
+                  {van.price}/day
                 </p>
                 <p>
                   <strong>Description: </strong>
-                  {e.description}
+                  {van.description}
                 </p>
                 <p>
-                  <strong className={`van-type-${e.type}-selected`}>
-                    Type: {e.type}
+                  <strong className={`van-type-${van.type}-selected`}>
+                    Type: {van.type}
                   </strong>
                 </p>
               </li>

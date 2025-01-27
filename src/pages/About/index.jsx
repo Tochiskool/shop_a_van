@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import UseFetch from "../../useFetch";
 import Image from "./images/house.jpg";
 import "./about.css";
+import VanDetail from "../VanDetail";
 
 // import Navbar from "../Navbar";
 
 const About = () => {
   const [data] = UseFetch("/api/vans");
-  console.log(data);
+
   const rightObject = {
     price: 60,
     imageUrl: Image,
@@ -44,8 +45,8 @@ const About = () => {
                           alt={e.name}
                         />
                         <p>
-                          <strong>Price: </strong>
-                          {e.price}
+                          <strong>Price: $ </strong>
+                          {e.price}/day
                         </p>
                         <p>
                           <strong>Description: </strong>
@@ -64,7 +65,9 @@ const About = () => {
           </div>
           <div className='col-1-2'>
             <div className='col-12 right'>
+              <VanDetail />
               <Link to='/'>Back to home</Link>
+
               <div>
                 <div className='imageBackground'>
                   <img src={rightObject.imageUrl} alt='a beautiful car' />
