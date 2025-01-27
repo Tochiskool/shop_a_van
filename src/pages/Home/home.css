@@ -31,9 +31,9 @@ section h1 {
   text-align: justify;
 }
 .pushUp blockquote {
-  border: 1px solid #fee6f0;
+  border: 1px solid var(--lightCoral);
   text-align: center;
-  background-color: #fee6f0;
+  background-color: var(--lightCoral);
   color: white;
   border-radius: 5px;
 }

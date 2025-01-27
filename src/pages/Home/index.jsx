@@ -21,7 +21,7 @@ const Home = () => {
   console.log(data);
   return (
     <section className='home'>
-      <h1>#VANLIFE</h1>
+      <h1>#VANLIFE</h1>60"
       <div className='container'>
         <div className='row'>
           <div className='col-1-2'>

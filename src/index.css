@@ -1,5 +1,11 @@
 @import "normalize.css";
 
+:root {
+  /* declare a variable with `--` syntax */
+  --darkText: #0b233a;
+  --lightCoral: #fee6f0;
+  --whiteText: #ffffff;
+}
 /* Change all elements to use border-box */
 
 html {
@@ -45,12 +51,12 @@ a:hover {
 .btn-primary {
   background: #8dc63f;
   border-color: #8dc63f;
-  color: white;
+  color: var(--whiteText);
   padding: 0.5rem;
 }
 .btn-primary:hover {
   background: none;
-  border-color: white;
+  border-color: var(--whiteText);
   text-decoration: none;
 }
 .center-block {

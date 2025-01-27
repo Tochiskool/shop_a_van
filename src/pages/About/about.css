@@ -10,11 +10,11 @@ section > div p {
 }
 .right,
 .vansBody {
-  border: 15px solid white;
+  border: 15px solid var(--whiteText);
   padding: 10px;
   border-radius: 2rem;
-  background-color: #fdeaf2;
-  box-shadow: 10px 10px 8px #f8f6f6;
+  background-color: var(--lightCoral);
+  box-shadow: 10px 10px 8px var(--lightCoral);
   overflow: scroll;
 }
 .imageBackground {

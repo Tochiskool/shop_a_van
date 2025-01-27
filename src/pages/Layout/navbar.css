@@ -1,8 +1,8 @@
 header {
   display: flex;
   justify-content: space-between;
-  background: #fee6f0;
-  border-bottom: 0.2rem solid blue;
+  background: var(--lightCoral);
+  border-bottom: 0.2rem solid var(--lightCoral);
 }
 header a {
   color: var(--darkText);
@@ -16,18 +16,18 @@ header a {
 .navEl > a {
   padding: 1rem;
   text-decoration: none;
-  color: white;
+  color: var(--darkText);
 }
 header a:hover,
 a:hover {
   /* background-color: blue; */
-  color: white;
+  color: var(--darkText);
 }
 
 .active {
-  color: lightcoral;
+  color: var(--lightCoral);
   background-color: blue;
 }
 .notActive {
-  color: white;
+  color: var(--darkText);
 }
