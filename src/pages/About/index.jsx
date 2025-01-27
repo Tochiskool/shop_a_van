@@ -52,7 +52,9 @@ const About = () => {
                           {e.description}
                         </p>
                         <p>
-                          <strong>Type: {e.type}</strong>
+                          <strong className={`van-type-${e.type}-selected`}>
+                            Type: {e.type}
+                          </strong>
                         </p>
                       </li>
                     </ul>

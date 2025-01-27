@@ -1,11 +1,31 @@
 @import "normalize.css";
 
+/* Theme */
 :root {
   /* declare a variable with `--` syntax */
   --darkText: #0b233a;
   --lightCoral: #fee6f0;
   --whiteText: #ffffff;
   --btnColor: #8dc63f;
+}
+
+.van-type-rugged-selected {
+  width: 20%;
+  background-color: #79c279;
+  padding: 0.5rem;
+  box-shadow: 2px 2px lightslategrey;
+}
+.van-type-simple-selected {
+  width: 20%;
+  background-color: hsl(331, 73%, 68%);
+  padding: 0.5rem;
+  box-shadow: 2px 2px lightslategrey;
+}
+.van-type-luxury-selected {
+  width: 20%;
+  background-color: gold;
+  padding: 0.5rem;
+  box-shadow: 2px 2px lightslategrey;
 }
 /* Change all elements to use border-box */
 
