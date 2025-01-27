@@ -25,9 +25,13 @@ a:hover {
 }
 
 .active {
-  color: var(--lightCoral);
-  background-color: blue;
+  color: var(--whiteText);
+  background-color: #f2a1e3;
 }
 .notActive {
-  color: var(--darkText);
+  color: var(--whiteText);
 }
+
+/* a:visited {
+  color: var(--darkText);
+} */

@@ -34,7 +34,7 @@ section h1 {
   border: 1px solid var(--lightCoral);
   text-align: center;
   background-color: var(--lightCoral);
-  color: white;
+  color: var(--darkText);
   border-radius: 5px;
 }
 .pushUp h3 {

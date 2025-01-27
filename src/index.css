@@ -5,6 +5,7 @@
   --darkText: #0b233a;
   --lightCoral: #fee6f0;
   --whiteText: #ffffff;
+  --btnColor: #8dc63f;
 }
 /* Change all elements to use border-box */
 
@@ -38,7 +39,7 @@ h3 {
   font-weight: bold;
 }
 a {
-  color: #8dc63f;
+  color: var(--btnColor);
   font-weight: bold;
 }
 a:hover {
@@ -49,8 +50,8 @@ a:hover {
   transition: all 0.3s ease 0s;
 }
 .btn-primary {
-  background: #8dc63f;
-  border-color: #8dc63f;
+  background: var(--btnColor);
+  border-color: var(--btnColor);
   color: var(--whiteText);
   padding: 0.5rem;
 }
