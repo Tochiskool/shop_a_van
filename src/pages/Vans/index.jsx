@@ -22,10 +22,10 @@ const Vans = () => {
                   <strong>Price: $ </strong>
                   {van.price}/day
                 </p>
-                <p>
+                {/* <p>
                   <strong>Description: </strong>
                   {van.description}
-                </p>
+                </p> */}
                 <p>
                   <strong className={`van-type-${van.type}-selected`}>
                     Type: {van.type}
