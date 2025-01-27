@@ -21,7 +21,7 @@ header a {
 header a:hover,
 a:hover {
   /* background-color: blue; */
-  color: var(--darkText);
+  color: var(--whiteText);
 }
 
 .active {
