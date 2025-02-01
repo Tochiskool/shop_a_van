@@ -7,8 +7,8 @@
 .vansContainer {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 0 0;
-  padding: 0.1rem;
+  flex: 1 0;
+  margin: auto 1rem;
   text-align: center;
   list-style: none;
 }
@@ -33,11 +33,11 @@
     float: left;
   }
   .vansContainer {
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    justify-content: center;
   }
   .vansContainer img {
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
   }
 }

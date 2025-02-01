@@ -4,6 +4,10 @@ section > div h2 {
   font-size: 30px;
   text-decoration: underline;
 }
+.about-header {
+  margin: 0.2rem;
+  font-style: italic;
+}
 section > div p {
   line-height: 1.8;
   font-size: 20px;
@@ -29,4 +33,11 @@ img {
   margin: 0 auto;
   object-fit: cover;
   border-radius: 2rem;
+}
+@media (min-width: 48em) {
+  /* CSS selector that targets all classes that start with .col- */
+  [class*="col-"] {
+    /* get your columns to stack horizontally when the screen is small and above */
+    float: left;
+  }
 }

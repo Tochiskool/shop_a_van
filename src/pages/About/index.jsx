@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -7,7 +7,7 @@ const About = () => {
       <div className='container'>
         <div className='row'>
           <section>
-            <div>
+            <div className='about-header'>
               <h2>Explore our van options</h2>
               <p>
                 We are the best shop in the city where you can hire a van for as
