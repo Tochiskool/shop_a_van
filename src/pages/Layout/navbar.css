@@ -25,13 +25,13 @@ a:hover {
 }
 
 .active {
-  color: var(--whiteText);
+  color: var(--darkText);
   background-color: #f2a1e3;
 }
 .notActive {
   color: var(--whiteText);
 }
 
-/* a:visited {
+a:visited {
   color: var(--darkText);
-} */
+}

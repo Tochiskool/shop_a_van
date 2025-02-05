@@ -20,6 +20,14 @@ const HostLayout = () => {
           Income
         </Link>
         <Link
+          to='/host/vans'
+          className={
+            location.pathname === "/host/vans" ? "active" : "notActive"
+          }
+        >
+          Vans
+        </Link>
+        <Link
           to='/host/reviews'
           className={
             location.pathname === "/host/reviews" ? "active" : "notActive"

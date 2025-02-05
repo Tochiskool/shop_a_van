@@ -65,6 +65,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* Anchor style with active link */
+/* a.active-link{
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--lightCoral);
+} */
 .btn {
   cursor: pointer;
   transition: all 0.3s ease 0s;

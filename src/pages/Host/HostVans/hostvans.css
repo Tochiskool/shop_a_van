@@ -1,0 +1,51 @@
+.host-vans-title {
+  text-align: center;
+  font-style: italic;
+}
+.host-vans-list {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.host-van-single {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  background-color: var(--lightCoral);
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+.host-van-single img {
+  max-width: 50%;
+  border-radius: 2rem;
+}
+.host-van-info {
+  width: 100%;
+  padding: 1rem;
+  align-content: center;
+}
+.host-van-info h3,
+.host-van-info p {
+  text-align: center;
+  font-weight: bolder;
+  font-size: large;
+}
+/* Media Query excludes extra small devices and includes small and above */
+/* Media query that will target small devices and above*/
+@media (max-width: 48em) {
+  /* CSS selector that targets all classes that start with .col- */
+  [class*="col-"] {
+    /* get your columns to stack horizontally when the screen is small and above */
+    float: left;
+  }
+  .host-van-single {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .host-van-single img {
+    max-width: 300px;
+  }
+}

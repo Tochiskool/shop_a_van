@@ -25,6 +25,18 @@ createServer({
       imageUrl:
         "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
       type: "rugged",
+      hostId: "123",
+    });
+    server.create("van", {
+      id: "124",
+      name: "Beach Bum",
+      price: 80,
+      description:
+        "Beach Bum is a van inspired by surfers and travelers. It was created to be a portable home away from home, but with some cool features in it you won't find in an ordinary camper.",
+      imageUrl:
+        "https://assets.scrimba.com/advanced-react/react-router/beach-bum.png",
+      type: "rugged",
+      hostId: "434",
     });
     server.create("van", {
       id: "3",
@@ -35,6 +47,7 @@ createServer({
       imageUrl:
         "https://assets.scrimba.com/advanced-react/react-router/reliable-red.png",
       type: "luxury",
+      hostId: "123",
     });
     server.create("van", {
       id: "4",
@@ -45,6 +58,7 @@ createServer({
       imageUrl:
         "https://assets.scrimba.com/advanced-react/react-router/dreamfinder.png",
       type: "simple",
+      hostId: "393",
     });
     server.create("van", {
       id: "5",
@@ -55,6 +69,7 @@ createServer({
       imageUrl:
         "https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png",
       type: "luxury",
+      hostId: "234",
     });
     server.create("van", {
       id: "6",
@@ -65,6 +80,18 @@ createServer({
       imageUrl:
         "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
       type: "rugged",
+      hostId: "456",
+    });
+    server.create("van", {
+      id: "123",
+      name: "Green Wonder",
+      price: 70,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
+      type: "rugged",
+      hostId: "123",
     });
   },
 
@@ -78,6 +105,17 @@ createServer({
     this.get("/vans/:id", (schema, request) => {
       const id = request.params.id;
       return schema.vans.find(id);
+    });
+    this.get("/host/vans", (schema, request) => {
+      // Hard-code the hostId for now
+      return schema.vans.where({ hostId: 123 });
+    });
+    this.get("/host/vans/:id", (schema, request) => {
+      // Hard-code the hostId for now
+      const id = request.params.id;
+      // const van = schema.vans.find(id);
+      return schema.vans.where({ id, hostId: "123" });
+      // return van;
     });
   },
 });
