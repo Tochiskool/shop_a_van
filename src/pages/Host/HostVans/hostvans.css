@@ -2,12 +2,68 @@
   text-align: center;
   font-style: italic;
 }
-.host-vans-list {
+
+.host-van-single {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border: 3px solid #ddd;
+  padding: 10px;
+  background-color: var(--lightCoral);
+  border-radius: 8px;
+}
+.host-van-single img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.host-van-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.host-van-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.host-van-info p {
+  font-size: 1rem;
+  color: var(--darkText);
+}
+@media screen and (max-width: 768px) {
+  .host-van-single {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .host-van-single img {
+    width: 100%; /* Full width on mobile */
+    max-width: 200px; /* Maximum size to prevent overflow */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area without overflowing */
+  }
+  .host-van-info {
+    margin-top: 10px;
+  }
+
+  .host-van-info h3 {
+    font-size: 1rem;
+  }
+
+  .host-van-info p {
+    font-size: 0.9rem;
+  }
+}
+/* .host-vans-list {
   padding: 1rem;
   margin: 0 auto;
   width: 100%;
-}
-.host-van-single {
+} */
+/* .host-van-single {
   display: flex;
   flex-direction: row;
   width: 50%;
@@ -31,7 +87,7 @@
   text-align: center;
   font-weight: bolder;
   font-size: large;
-}
+} */
 /* Media Query excludes extra small devices and includes small and above */
 /* Media query that will target small devices and above*/
 @media (max-width: 48em) {
@@ -40,6 +96,23 @@
     /* get your columns to stack horizontally when the screen is small and above */
     float: left;
   }
+
+  .host-van-single {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+  .host-van-single img {
+  }
+  .host-van-info {
+    width: 100%;
+  }
+  /* .host-vans-list {
+    display: flex;
+  }
   .host-van-single {
     display: flex;
     flex-direction: column;
@@ -47,5 +120,6 @@
   }
   .host-van-single img {
     max-width: 300px;
-  }
+    margin: 0 auto;
+  } */
 }

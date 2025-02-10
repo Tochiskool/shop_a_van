@@ -6,7 +6,8 @@ const HostLayout = () => {
     <>
       <nav className='navEl'>
         <Link
-          to='/host'
+          to='.'
+          end
           className={location.pathname === "/host" ? "active" : "notActive"}
         >
           Dashboard

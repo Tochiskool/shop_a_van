@@ -13,6 +13,9 @@ import Reviews from "./pages/Host/Reviews";
 import Dashboard from "./pages/Host/Dashboard";
 import HostVans from "./pages/Host/HostVans";
 import HostVansDetails from "./pages/Host/HostVansDetails";
+import Princing from "./pages/Host/HostVansDetails/Pricing";
+import Photos from "./pages/Host/HostVansDetails/Photos";
+import HostVanInfo from "./pages/Host/HostVansDetails/HostVanInfo";
 
 // import Navbar from "./pages/Navbar";
 const App = () => {
@@ -30,7 +33,11 @@ const App = () => {
             <Route path='reviews' element={<Reviews />} />
             <Route path='vans' element={<HostVans />} />
             {/* No nesting of vans/id becasue they are not sharing the same UI */}
-            <Route path='vans/:id' element={<HostVansDetails />} />
+            <Route path='vans/:id' element={<HostVansDetails />}>
+              <Route index element={<HostVanInfo />} />
+              <Route path='pricing' element={<Princing />} />
+              <Route path='photos' element={<Photos />} />
+            </Route>
           </Route>
           <Route path='*' element={<NoPage />} />
         </Route>

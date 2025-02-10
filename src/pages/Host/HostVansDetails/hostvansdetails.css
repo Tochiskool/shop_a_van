@@ -1,0 +1,100 @@
+/* Back Link Styling */
+.backLink {
+  display: inline-block;
+  width: 20%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+
+  transition: background-color 0.3s ease;
+}
+.backLink:hover {
+  background-color: var(--darkText);
+  color: var(--whiteText);
+  width: 18%;
+  /* transition: background-color 0.3s ease; */
+}
+
+/* Van Details */
+.hostVansDetail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--whiteText);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.hostVansContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vanImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.vanImage img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.vanDetails {
+  background-color: var(--lightCoral);
+  text-align: center;
+  max-width: 70%;
+}
+.vanName {
+  margin: 1rem;
+}
+.vanDescription {
+  padding: 0 1rem;
+  font-size: larger;
+  line-height: 1.2;
+  font-style: italic;
+}
+.vanPrice {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--money);
+}
+
+.priceLabel {
+  font-weight: normal;
+  color: #555;
+}
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+@media (min-width: 768px) {
+  .hostVansContainer {
+    padding: 10px;
+    overflow: hidden;
+  }
+  .backLink {
+    display: inline-block;
+    max-width: 50%;
+  }
+  .vanImage img {
+    width: 100%;
+  }
+
+  .vanName {
+    font-size: 2rem;
+  }
+
+  .vanDescription {
+    font-size: 1rem;
+  }
+
+  .vanPrice {
+    font-size: 1.1rem;
+  }
+}
