@@ -44,6 +44,15 @@ const Header = () => {
           >
             Host
           </NavLink>
+          <NavLink
+            to='/login'
+            // className={location.pathname === "/login" ? "active" : "notActive"}
+            className={({ isActive }) =>
+              isActive && location.pathname === "/login" ? "active" : null
+            }
+          >
+            Login
+          </NavLink>
         </nav>
       </header>
     </>

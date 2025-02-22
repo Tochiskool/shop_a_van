@@ -22,6 +22,7 @@ import Princing from "./pages/Host/HostVansDetails/Pricing";
 import Photos from "./pages/Host/HostVansDetails/Photos";
 import HostVanInfo from "./pages/Host/HostVansDetails/HostVanInfo";
 import Error from "./components/Error";
+import Login from "./pages/Login";
 
 // import Navbar from "./pages/Navbar";
 const router = createBrowserRouter(
@@ -48,6 +49,7 @@ const router = createBrowserRouter(
           <Route path='photos' element={<Photos />} />
         </Route>
       </Route>
+      <Route path='login' element={<Login />} />
       <Route path='*' element={<NoPage />} />
     </Route>
   )
