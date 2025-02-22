@@ -72,6 +72,17 @@ createServer({
       hostId: "234",
     });
     server.create("van", {
+      id: "10",
+      name: "The Cruiser",
+      price: 130,
+      description:
+        "The Cruiser is a van for those who love to travel in comfort and luxury. With its many windows, spacious interior and ample storage space, the Cruiser offers a beautiful view wherever you go.",
+      imageUrl:
+        "https://assets.scrimba.com/advanced-react/react-router/the-cruiser.png",
+      type: "luxury",
+      hostId: "564",
+    });
+    server.create("van", {
       id: "6",
       name: "Green Wonder",
       price: 70,
@@ -93,15 +104,38 @@ createServer({
       type: "rugged",
       hostId: "123",
     });
+    server.create("van", {
+      id: "156",
+      name: "Green Wonder",
+      price: 270,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        "https://assets.scrimba.com/advanced-react/react-router/green-wonder.png",
+      type: "rugged",
+      hostId: "980",
+    });
   },
 
   routes() {
     this.namespace = "api";
 
+    // this.get("/vans", (schema, request) => {
+    //   return schema.vans.all();
+    // });
+    // this.get("/vans", (schema, request) => {
+    //   return new Response(400, {}, { error: "Error Fetching Data" });
+    //   // return schema.vans.all();
+    // });
     this.get("/vans", (schema, request) => {
+      const randomFail = Math.random() < 0.2; // 20% chance of failure
+
+      if (randomFail) {
+        return new Response(400, {}, { error: "Error Fetching Data" });
+      }
+
       return schema.vans.all();
     });
-
     this.get("/vans/:id", (schema, request) => {
       const id = request.params.id;
       return schema.vans.find(id);

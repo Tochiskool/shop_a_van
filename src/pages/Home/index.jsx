@@ -4,9 +4,16 @@ import "./home.css";
 import house from "./images/house.jpg";
 import UseFetch from "../../useFetch";
 import Vans from "../Vans";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 // import Layout from "../Layout";
+
+// Loader
+export const loader = () => {
+  return " The data is here";
+};
 const Home = () => {
+  const homeData = useLoaderData();
+  console.log(homeData);
   const [toggleVisibility, setToggleVisibility] = useState(false);
 
   const [data] = UseFetch("/api/vans");

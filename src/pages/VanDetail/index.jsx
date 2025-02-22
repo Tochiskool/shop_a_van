@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 
 import "./vandetail.css";
 
 const VanDetail = () => {
+  const location = useLocation();
   const params = useParams();
   const [van, setVans] = useState(null);
+  console.log(location);
+
   useEffect(() => {
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
       .then((data) => setVans(data.vans));
   }, [params.id]);
-
+  const search = location.state?.search || ""; // A backup if incase location.state.search does not exist.
+  const type = location.state?.type || "all"; // A backup if incase location.state.search does not exist.
   return (
     <div className='col-12 right'>
+      <Link to={`../vans${search}`} className='backLink'>
+        {`<--`}Back to all {type}
+      </Link>
       {van ? (
         <div className='imageBackground'>
           <img src={van.imageUrl} alt={van.type} />

@@ -7,7 +7,7 @@ footer {
   width: 100%;
   background-color: var(--magic); /* You can adjust the background color */
   color: var(--darkText);
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 10;
 }
 

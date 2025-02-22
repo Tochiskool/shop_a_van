@@ -3,10 +3,12 @@ import { useParams, Link, Outlet, useLocation } from "react-router-dom";
 
 import "./hostvansdetails.css";
 import { useEffect } from "react";
+import HostVanDetailsNav from "../../../components/HostVanDetailsNav";
 const HostVansDetails = () => {
+  const location = useLocation();
   const [van, setHostVans] = useState(null);
   const params = useParams();
-  const location = useLocation();
+
   useEffect(() => {
     fetch(`/api/host/vans/${params.id}`) // Assuming the response is an array of vans
       .then((res) => res.json())
@@ -21,9 +23,10 @@ const HostVansDetails = () => {
     return <div className='loading'>Loading...</div>;
   }
   console.log(van);
+  const search = location.state?.search || "";
   return (
     <section>
-      <Link to='../vans' className='backLink'>
+      <Link to={`../vans${search}`} className='backLink'>
         {`<--`}Back to all vans
       </Link>
       <div className='hostVansContainer'>
@@ -39,27 +42,8 @@ const HostVansDetails = () => {
           </p>
         </div>
       </div>
-      <nav>
-        <Link
-          to='.'
-          className={location.pathname === "." ? "active" : "notActive"}
-        >
-          Details
-        </Link>
-        <Link
-          to='/pricing'
-          className={location.pathname === "/pricing" ? "active" : "notActive"}
-        >
-          Pricing
-        </Link>
-        <Link
-          to='/photos'
-          className={location.pathname === "/photos" ? "active" : "notActive"}
-        >
-          Photos
-        </Link>
-      </nav>
-      <Outlet />
+      <HostVanDetailsNav />
+      <Outlet context={{ van }} />
     </section>
   );
 };

@@ -29,6 +29,12 @@
   padding: 0.5rem;
   box-shadow: 2px 2px lightslategrey;
 }
+.van-type-btn-primary-selected {
+  width: 20%;
+  background-color: #63d0e1;
+  padding: 0.5rem;
+  box-shadow: 2px 2px lightslategrey;
+}
 /* Change all elements to use border-box */
 
 html {
@@ -48,10 +54,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   overflow: scroll;
-  background: linear-gradient(135deg, #fee6f0 25%, transparent 25%) -50px 0,
+  /* background: linear-gradient(135deg, #fee6f0 25%, transparent 25%) -50px 0,
     linear-gradient(225deg, #fee6f0 25%, transparent 25%) -50px 0,
     linear-gradient(315deg, #fee6f0 25%, transparent 25%),
-    linear-gradient(45deg, #fee6f0 25%, transparent 25%);
+    linear-gradient(45deg, #fee6f0 25%, transparent 25%); */
   background-size: 100px 100px; /* Adjust the size based on the pattern */
 }
 
