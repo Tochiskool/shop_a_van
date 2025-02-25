@@ -1,5 +1,7 @@
 import React from "react";
+import avatarImg from "./images/avatar-15.png";
 import { NavLink, Link, useLocation } from "react-router-dom";
+import "./avatar.css";
 const Header = () => {
   const location = useLocation();
   return (
@@ -48,9 +50,12 @@ const Header = () => {
             to='/login'
             // className={location.pathname === "/login" ? "active" : "notActive"}
             className={({ isActive }) =>
-              isActive && location.pathname === "/login" ? "active" : null
+              isActive && location.pathname === "/login"
+                ? "active login-link"
+                : "login-link"
             }
           >
+            <img src={avatarImg} alt={`persons face`} className='avatar' />
             Login
           </NavLink>
         </nav>

@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { useParams, useLocation, Link } from "react-router-dom";
-
+// import React, { useState } from "react";
+import { useLocation, Link, useLoaderData } from "react-router-dom";
+import { getVans } from "../../api";
 import "./vandetail.css";
-
+//We are not longer using the useParams hook but a param object inside the loader function
+export const loader = ({ params }) => {
+  console.log(params);
+  return getVans(params.id);
+};
 const VanDetail = () => {
+  const van = useLoaderData();
   const location = useLocation();
-  const params = useParams();
-  const [van, setVans] = useState(null);
+  // const params = useParams();
+  // const [van, setVans] = useState(null);
   console.log(location);
 
-  useEffect(() => {
-    fetch(`/api/vans/${params.id}`)
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans));
-  }, [params.id]);
+  if (!van) {
+    return <h2>Error: Van not found.</h2>;
+  }
+  // useEffect(() => {
+  //   fetch(`/api/vans/${params.id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setVans(data.vans));
+  // }, [params.id]);
   const search = location.state?.search || ""; // A backup if incase location.state.search does not exist.
   const type = location.state?.type || "all"; // A backup if incase location.state.search does not exist.
   return (
