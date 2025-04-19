@@ -16,9 +16,9 @@ import Host from "./pages/Host";
 import Income from "./pages/Host/Income";
 import Reviews from "./pages/Host/Reviews";
 import Dashboard from "./pages/Host/Dashboard";
-import HostVans from "./pages/Host/HostVans";
+import HostVans, { loader as hostVanLoader } from "./pages/Host/HostVans";
 import HostVansDetails, {
-  loader as hostVanLoader,
+  loader as hostVanDetailsLoader,
 } from "./pages/Host/HostVansDetails";
 import Princing from "./pages/Host/HostVansDetails/Pricing";
 import Photos from "./pages/Host/HostVansDetails/Photos";
@@ -58,15 +58,13 @@ const router = createBrowserRouter(
         <Route
           path='vans'
           element={<HostVans />}
-          loader={async () => {
-            return null;
-          }}
+          // loader={hostVanLoader}
         />
         {/* No nesting of vans/id becasue they are not sharing the same UI */}
         <Route
           path='vans/:id'
           element={<HostVansDetails />}
-          loader={hostVanLoader}
+          loader={hostVanDetailsLoader}
         >
           <Route
             index

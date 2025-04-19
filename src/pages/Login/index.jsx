@@ -14,6 +14,7 @@ const Login = () => {
       [name]: value,
     }));
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(logInfo); //console log every data in the logInfo varaible

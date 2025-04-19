@@ -29,7 +29,8 @@ const VanDetail = () => {
       <Link to={`../vans${search}`} className='backLink'>
         {`<--`}Back to all {type}
       </Link>
-      {van ? (
+      {/* No need to check with a tenary if van exist */}
+      {
         <div className='imageBackground'>
           <img src={van.imageUrl} alt={van.type} />
           <div className='carStyle'>
@@ -40,9 +41,7 @@ const VanDetail = () => {
             <button className=' col-12 btn-primary'>Rent this van</button>
           </div>
         </div>
-      ) : (
-        <h2>Loading...</h2>
-      )}
+      }
       {/* <div className='imageBackground'>
                   <img src={rightObject.imageUrl} alt='a beautiful car' />
                 </div>

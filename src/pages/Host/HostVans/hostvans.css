@@ -58,6 +58,42 @@
     font-size: 0.9rem;
   }
 }
+.loading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4500; /* A bright color like orange-red */
+  margin-top: 50px;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+/* 👇 Improved Fade-In Effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+    transform: scale(0.9); /* Slight shrink effect */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1); /* Slight grow effect */
+  }
+}
+/* .loading {
+  text-align: center;
+  font-size: 24px;
+  color: gray;
+  margin-top: 50px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
 /* .host-vans-list {
   padding: 1rem;
   margin: 0 auto;
